@@ -113,38 +113,6 @@ function getRadioButtonValue(){
 	}
 }
 
-//====================================
-//scoring code from working triviagame
-//====================================
-//			function submitAnswers() {
-//				var total = 4;
-//				var wins = 0;
-//				var losses = 0;
-
-//			//check answers
-//			for(i = 1; i <= total; i++){
-//				if(eval('q' + i) === answers[i - 1]){
-//				wins++;
-//				}
-//		
-//				else {
-//				losses++;	
-//				}
-//			}
-//
-//			//display results
-//			var results = document.getElementById('results');
-//			results.innerHTML = '<h1 style="font-weight: bold;">Correct answers: <span>' + wins + '</span> <br> Incorrect answers: <span>' + losses + '</span> <br> Total questions: <span>' + total + '</span> <br> Thanks for playing!</h1>';	
-//
-//			alert('You scored ' + wins + ' out of ' + total + '!');
-//
-//			return false;
-//			}
-
-//================================
-//end working code from triviagame
-//================================
-
 function playAgain(){
 	questionNumber = i;
 	getQuestion();
