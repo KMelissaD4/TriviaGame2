@@ -1,4 +1,5 @@
 var seconds = 45;
+console.log("DreamWeaver sucks!")
 	function secondsPassed() {
 		var minutes = Math.round((seconds - 30) / 60);
 		var remainingSeconds = seconds % 60;
@@ -19,7 +20,7 @@ var seconds = 45;
 		}
 	}
 
-var countdownTimer = setInterval('secondsPassed()', 1000);
+var countdownTimer = setInterval(secondsPassed, 1000);
 
 var questionNumber = 0;
 function getQuestion(){
@@ -37,12 +38,12 @@ function getQuestion(){
 			document.getElementById("questionPage").innerHTML = "<h3>Q4 - Detective Cable-Player is known for which quality?</h3><input type='radio' name='options' value='A'>A) A bad temper, he'll scratch easily.<br><input type='radio' name='options' value='B'>B) He's aloof. He doesn't care that you're home.<br><input type='radio' name='options' value='C'>C) He's groomer, known to clean the perps during questioning.<br><button onclick='getAnswer()'>Continue</button>";
 			break;
 		case 4:								
-			document.getElementById("questionPage").innerHTML = "<h1>You have completed the Trivia Game!</h1><button onclick='playAgain()'>Play Again!</button>";
+			document.getElementById("questionPage").innerHTML = "<h1>You have completed the Trivia Game!<br>Correct Answers: " + wins + "<br>Wrong Answers: " + losses + "<br>Total Questions: 4</h1><button onclick='playAgain()'>Play Again!</button>";
 			break;
 	}
 }
 
-var wins = 0;
+var wins = 0
 var losses = 0;
 var total = 4;
 function getAnswer(){
