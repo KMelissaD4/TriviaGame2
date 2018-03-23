@@ -80,29 +80,26 @@
                 switch(questionNumber){
                     case 0:
                         if(getRadioButtonValue() == "C"){
-                            console.log("Correct Answer!");
                             wins++;
+							console.log("correct " + wins);
 							questionNumber++;
                             getQuestion();
                         }else{
-                            console.log("Bad Answer!");
 							losses++;
-							console.log(losses);
+							console.log("wrong " + losses);
 							questionNumber++;
                             getQuestion();
                         }
                         break;
 					case 1:
                         if(getRadioButtonValue() == "A"){
-                            console.log("Correct Answer!");
 							wins++;
-							console.log(wins);
+							console.log("correct " + wins);
                             questionNumber++;
                             getQuestion();
                         }else{
-                            console.log("Bad Answer!");
 							losses++;
-							console.log(losses);
+							console.log("wrong " + losses);
 							questionNumber++;
                             getQuestion();
                         }
@@ -110,13 +107,12 @@
 					case 2:
                         if(getRadioButtonValue() == "C"){
 							wins++;
-							console.log(wins);
+							console.log("correct " + wins);
                             questionNumber++;
                             getQuestion();
                         }else{
-                            console.log("Bad Answer!");
 							losses++;
-							console.log(losses);
+							console.log("wrong " + losses);
 							questionNumber++;
                             getQuestion();
                         }
@@ -124,19 +120,17 @@
 					case 3:
                         if(getRadioButtonValue() == "A"){
 							wins++;
-							console.log(wins);
+							console.log("correct " + wins);
                             questionNumber++;
                             getQuestion();
                         }else{
 							losses++;
-							console.log(losses);
+							console.log("wrong " + losses);
 							questionNumber++;
                             getQuestion();
                         }
                         break;
-					case 4:
 						
-
                 }
             }
              
