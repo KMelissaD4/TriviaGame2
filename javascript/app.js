@@ -1,4 +1,6 @@
 var seconds = 45;
+var countdownTimer;
+
 console.log("DreamWeaver sucks!")
 	function secondsPassed() {
 		var minutes = Math.round((seconds - 30) / 60);
@@ -20,7 +22,11 @@ console.log("DreamWeaver sucks!")
 		}
 	}
 
-var countdownTimer = setInterval(secondsPassed, 1000);
+ function startTimer(){
+	seconds = 45
+	clearInterval(countdownTimer)
+	countdownTimer = setInterval(secondsPassed, 1000);
+ }
 
 var questionNumber = 0;
 function getQuestion(){
@@ -37,7 +43,8 @@ function getQuestion(){
 		case 3:
 			document.getElementById("questionPage").innerHTML = "<h3>Q4 - Detective Cable-Player is known for which quality?</h3><input type='radio' name='options' value='A'>A) A bad temper, he'll scratch easily.<br><input type='radio' name='options' value='B'>B) He's aloof. He doesn't care that you're home.<br><input type='radio' name='options' value='C'>C) He's groomer, known to clean the perps during questioning.<br><button onclick='getAnswer()'>Continue</button>";
 			break;
-		case 4:								
+		case 4:
+			clearInterval(countdownTimer)
 			document.getElementById("questionPage").innerHTML = "<h1>You have completed the Trivia Game!<br>Correct Answers: " + wins + "<br>Wrong Answers: " + losses + "<br>Total Questions: 4</h1><button onclick='playAgain()'>Play Again!</button>";
 			break;
 	}
@@ -47,6 +54,7 @@ var wins = 0
 var losses = 0;
 var total = 4;
 function getAnswer(){
+	startTimer()
 	switch(questionNumber){
 		case 0:
 			if(getRadioButtonValue() == "C"){
